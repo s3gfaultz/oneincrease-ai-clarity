@@ -8,56 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Vibrant Manufacturing AI Design System */
-    --background: 0 0% 98%;
-    --foreground: 222 47% 11%;
+    /* Lovable-inspired Design System */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 9%;
 
-    /* Vibrant primary colors */
-    --primary: 252 83% 57%;
-    --primary-foreground: 0 0% 98%;
+    /* Vibrant red primary */
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Dynamic secondary */
-    --secondary: 288 89% 58%;
-    --secondary-foreground: 0 0% 98%;
+    /* Electric blue secondary */
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Muted with subtle tint */
-    --muted: 220 13% 91%;
+    /* Subtle grays */
+    --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Bright cyan accent */
-    --accent: 191 91% 49%;
-    --accent-foreground: 0 0% 98%;
+    /* Vibrant orange accent */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
 
     /* Success green */
     --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
+    --success-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 252 83% 57%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 0 72% 51%;
 
-    /* Vibrant gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(252 83% 57%), hsl(288 89% 58%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(252 83% 97%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(252 83% 97%));
-    --gradient-glass: linear-gradient(145deg, hsl(252 83% 57% / 0.1), hsl(288 89% 58% / 0.1));
-    --gradient-accent: linear-gradient(135deg, hsl(191 91% 49%), hsl(142 76% 36%));
+    /* Dynamic gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 72% 51%), hsl(25 95% 53%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 60%), hsl(0 72% 51%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(217 91% 98%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(217 91% 97%));
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.1), hsl(217 91% 60% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(0 72% 51%));
+    --gradient-blue-red: linear-gradient(135deg, hsl(217 91% 60%), hsl(0 72% 51%));
     
-    /* Vibrant shadows with color */
-    --shadow-luxury: 0 25px 50px -12px hsl(252 83% 57% / 0.25);
-    --shadow-card: 0 10px 30px -10px hsl(252 83% 57% / 0.15);
-    --shadow-glow: 0 0 40px hsl(191 91% 49% / 0.4);
-    --shadow-purple: 0 20px 40px -10px hsl(288 89% 58% / 0.3);
-    --shadow-cyan: 0 20px 40px -10px hsl(191 91% 49% / 0.3);
+    /* Colorful shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(0 72% 51% / 0.25);
+    --shadow-card: 0 10px 30px -10px hsl(217 91% 60% / 0.15);
+    --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.4);
+    --shadow-red: 0 20px 40px -10px hsl(0 72% 51% / 0.3);
+    --shadow-blue: 0 20px 40px -10px hsl(217 91% 60% / 0.3);
+    --shadow-orange: 0 20px 40px -10px hsl(25 95% 53% / 0.3);
     
     /* Glass effect properties */
     --glass-bg: hsl(0 0% 100% / 0.1);

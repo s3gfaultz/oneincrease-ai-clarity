@@ -45,13 +45,13 @@ ${formData.message}`;
   };
 
   return (
-    <section className="py-24 bg-gradient-hero">
+    <section className="py-24 bg-gradient-secondary">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Transform Your Manufacturing?
           </h2>
-          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Connect with our AI experts and discover how oneincrease can revolutionize your operations.
           </p>
         </div>
@@ -113,7 +113,7 @@ ${formData.message}`;
                 />
               </div>
               
-              <Button type="submit" variant="glass-purple" className="w-full group">
+              <Button type="submit" variant="glass-red" className="w-full group">
                 Send Message
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>

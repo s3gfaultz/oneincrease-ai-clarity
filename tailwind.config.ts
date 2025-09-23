@@ -64,17 +64,20 @@ export default {
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-secondary": "var(--gradient-secondary)", 
         "gradient-subtle": "var(--gradient-subtle)",
         "gradient-card": "var(--gradient-card)",
         "gradient-glass": "var(--gradient-glass)",
         "gradient-accent": "var(--gradient-accent)",
+        "gradient-blue-red": "var(--gradient-blue-red)",
       },
       boxShadow: {
         "luxury": "var(--shadow-luxury)",
         "card": "var(--shadow-card)",
         "glow": "var(--shadow-glow)",
-        "purple": "var(--shadow-purple)",
-        "cyan": "var(--shadow-cyan)",
+        "red": "var(--shadow-red)",
+        "blue": "var(--shadow-blue)", 
+        "orange": "var(--shadow-orange)",
       },
       backdropBlur: {
         xs: "2px",
