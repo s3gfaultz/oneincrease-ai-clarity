@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Premium Manufacturing AI Design System */
+    /* Vibrant Manufacturing AI Design System */
     --background: 0 0% 98%;
     --foreground: 222 47% 11%;
 
@@ -18,42 +18,56 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* Deep navy primary for confidence and security */
-    --primary: 222 47% 11%;
+    /* Vibrant primary colors */
+    --primary: 252 83% 57%;
     --primary-foreground: 0 0% 98%;
 
-    /* Sophisticated secondary */
-    --secondary: 215 25% 27%;
+    /* Dynamic secondary */
+    --secondary: 288 89% 58%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Muted grays */
+    /* Muted with subtle tint */
     --muted: 220 13% 91%;
     --muted-foreground: 215 16% 47%;
 
-    /* Premium accent */
-    --accent: 213 94% 68%;
+    /* Bright cyan accent */
+    --accent: 191 91% 49%;
     --accent-foreground: 0 0% 98%;
+
+    /* Success green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 213 94% 68%;
+    --ring: 252 83% 57%;
 
-    /* Premium gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 11%), hsl(215 25% 27%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(220 13% 95%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 97%));
+    /* Vibrant gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(252 83% 57%), hsl(288 89% 58%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(252 83% 97%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(252 83% 97%));
+    --gradient-glass: linear-gradient(145deg, hsl(252 83% 57% / 0.1), hsl(288 89% 58% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(191 91% 49%), hsl(142 76% 36%));
     
-    /* Professional shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(222 47% 11% / 0.15);
-    --shadow-card: 0 10px 30px -10px hsl(222 47% 11% / 0.1);
-    --shadow-glow: 0 0 40px hsl(213 94% 68% / 0.3);
+    /* Vibrant shadows with color */
+    --shadow-luxury: 0 25px 50px -12px hsl(252 83% 57% / 0.25);
+    --shadow-card: 0 10px 30px -10px hsl(252 83% 57% / 0.15);
+    --shadow-glow: 0 0 40px hsl(191 91% 49% / 0.4);
+    --shadow-purple: 0 20px 40px -10px hsl(288 89% 58% / 0.3);
+    --shadow-cyan: 0 20px 40px -10px hsl(191 91% 49% / 0.3);
+    
+    /* Glass effect properties */
+    --glass-bg: hsl(0 0% 100% / 0.1);
+    --glass-border: hsl(0 0% 100% / 0.2);
+    --glass-hover: hsl(0 0% 100% / 0.2);
     
     /* Smooth animations */
     --transition-luxury: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glass: backdrop-filter 0.3s ease, background-color 0.3s ease;
 
     --radius: 0.5rem;
 

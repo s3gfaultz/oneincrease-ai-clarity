@@ -10,7 +10,7 @@ const Products = () => {
       title: "AI Demand Prediction",
       description: "Advanced AI model that predicts future orders based on historical data, market trends, and seasonal patterns. Reduce inventory costs while ensuring demand fulfillment.",
       features: ["Historical data analysis", "Market trend integration", "Seasonal pattern recognition", "95%+ accuracy rate"],
-      color: "from-blue-500/20 to-blue-600/20"
+      color: "from-primary/20 to-accent/20"
     },
     {
       name: "Dexter", 
@@ -18,7 +18,7 @@ const Products = () => {
       title: "Smart Machine Scheduler",
       description: "Intelligent scheduling system that optimizes machine utilization, reduces downtime, and improves overall production efficiency through AI-driven resource allocation.",
       features: ["Real-time scheduling", "Downtime minimization", "Resource optimization", "40% efficiency boost"],
-      color: "from-purple-500/20 to-purple-600/20"
+      color: "from-secondary/20 to-primary/20"
     },
     {
       name: "Zain",
@@ -26,7 +26,7 @@ const Products = () => {
       title: "Performance Analytics",
       description: "Comprehensive performance analyzer that monitors capacity utilization, identifies bottlenecks, and provides actionable insights to maximize operational efficiency.",
       features: ["Capacity monitoring", "Bottleneck identification", "Performance metrics", "Real-time dashboards"],
-      color: "from-green-500/20 to-green-600/20"
+      color: "from-accent/20 to-success/20"
     }
   ];
 
@@ -53,12 +53,12 @@ const Products = () => {
               
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
+                  <div className="p-3 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/10 group-hover:border-white/20 transition-all duration-300">
                     <product.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-foreground">{product.name}</h3>
-                    <p className="text-sm font-medium text-accent">{product.title}</p>
+                    <p className="text-sm font-medium bg-gradient-accent bg-clip-text text-transparent">{product.title}</p>
                   </div>
                 </div>
 
@@ -69,13 +69,13 @@ const Products = () => {
                 <ul className="space-y-2 mb-8">
                   {product.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-accent" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Button variant="premium" className="w-full group">
+                <Button variant="glass" className="w-full group">
                   Learn More
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </Button>

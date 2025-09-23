@@ -22,7 +22,7 @@ const Hero = () => {
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Turn complexity into
-          <span className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text text-transparent block mt-2">
+          <span className="bg-gradient-accent bg-clip-text text-transparent block mt-2">
             clarity!
           </span>
         </h1>
@@ -33,26 +33,26 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="lg" className="group">
+          <Button variant="glass-purple" size="lg" className="group">
             Get Started Today
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
-          <Button variant="outline-premium" size="lg">
+          <Button variant="glass-cyan" size="lg">
             Watch Demo
           </Button>
         </div>
         
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="group">
-            <div className="text-3xl font-bold text-accent mb-2">99.2%</div>
+            <div className="text-3xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-2">99.2%</div>
             <div className="text-sm opacity-80">Prediction Accuracy</div>
           </div>
           <div className="group">
-            <div className="text-3xl font-bold text-accent mb-2">40%</div>
+            <div className="text-3xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-2">40%</div>
             <div className="text-sm opacity-80">Efficiency Increase</div>
           </div>
           <div className="group">
-            <div className="text-3xl font-bold text-accent mb-2">24/7</div>
+            <div className="text-3xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-2">24/7</div>
             <div className="text-sm opacity-80">Real-time Monitoring</div>
           </div>
         </div>

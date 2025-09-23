@@ -58,24 +58,24 @@ ${formData.message}`;
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <Card className="p-8 bg-card/95 backdrop-blur-sm shadow-luxury border-0">
-            <h3 className="text-2xl font-bold mb-6 text-foreground">Get in Touch</h3>
+          <Card className="p-8 bg-white/10 backdrop-blur-glass border border-white/20 shadow-luxury">
+            <h3 className="text-2xl font-bold mb-6 text-primary-foreground">Get in Touch</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name" className="text-primary-foreground">Name</Label>
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="transition-all duration-300 focus:shadow-glow"
+                    className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="text-primary-foreground">Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -83,24 +83,24 @@ ${formData.message}`;
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="transition-all duration-300 focus:shadow-glow"
+                    className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
                   />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="company">Company</Label>
+                <Label htmlFor="company" className="text-primary-foreground">Company</Label>
                 <Input
                   id="company"
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="transition-all duration-300 focus:shadow-glow"
+                  className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message" className="text-primary-foreground">Message</Label>
                 <Textarea
                   id="message"
                   name="message"
@@ -108,12 +108,12 @@ ${formData.message}`;
                   onChange={handleInputChange}
                   rows={5}
                   required
-                  className="resize-none transition-all duration-300 focus:shadow-glow"
+                  className="resize-none bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
                   placeholder="Tell us about your manufacturing challenges and goals..."
                 />
               </div>
               
-              <Button type="submit" variant="hero" className="w-full group">
+              <Button type="submit" variant="glass-purple" className="w-full group">
                 Send Message
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
@@ -132,7 +132,7 @@ ${formData.message}`;
 
             <div className="space-y-6">
               <div className="flex items-center gap-4 text-primary-foreground">
-                <div className="p-3 rounded-lg bg-accent/20">
+                <div className="p-3 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/20">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -142,7 +142,7 @@ ${formData.message}`;
               </div>
 
               <div className="flex items-center gap-4 text-primary-foreground">
-                <div className="p-3 rounded-lg bg-accent/20">
+                <div className="p-3 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/20">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
@@ -152,7 +152,7 @@ ${formData.message}`;
               </div>
 
               <div className="flex items-center gap-4 text-primary-foreground">
-                <div className="p-3 rounded-lg bg-accent/20">
+                <div className="p-3 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/20">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -162,23 +162,23 @@ ${formData.message}`;
               </div>
             </div>
 
-            <div className="p-6 rounded-lg bg-accent/10 border border-accent/20">
+            <div className="p-6 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/20">
               <h4 className="font-semibold text-primary-foreground mb-3">Why Choose oneincrease?</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/80">
                 <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-accent" />
                   Industry-leading AI technology
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-accent" />
                   Proven ROI with measurable results
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-accent" />
                   Seamless integration with existing systems
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-accent" />
                   24/7 expert support and monitoring
                 </li>
               </ul>

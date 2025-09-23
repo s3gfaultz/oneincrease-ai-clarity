@@ -39,6 +39,10 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -62,11 +66,19 @@ export default {
         "gradient-hero": "var(--gradient-hero)",
         "gradient-subtle": "var(--gradient-subtle)",
         "gradient-card": "var(--gradient-card)",
+        "gradient-glass": "var(--gradient-glass)",
+        "gradient-accent": "var(--gradient-accent)",
       },
       boxShadow: {
         "luxury": "var(--shadow-luxury)",
         "card": "var(--shadow-card)",
         "glow": "var(--shadow-glow)",
+        "purple": "var(--shadow-purple)",
+        "cyan": "var(--shadow-cyan)",
+      },
+      backdropBlur: {
+        xs: "2px",
+        glass: "12px",
       },
       transitionTimingFunction: {
         "luxury": "cubic-bezier(0.16, 1, 0.3, 1)",
