@@ -109,36 +109,46 @@ export default {
             height: "0",
           },
         },
-        "float": {
+        "breathe": {
           "0%, 100%": {
-            transform: "translateY(0px) rotate(0deg)",
+            transform: "scale(1)",
+            opacity: "0.2",
           },
           "50%": {
-            transform: "translateY(-20px) rotate(5deg)",
-          },
-        },
-        "flow-right": {
-          "0%": {
-            transform: "translateX(-100px) translateY(0px)",
-            opacity: "0",
-          },
-          "10%": {
+            transform: "scale(1.1)",
             opacity: "0.3",
           },
-          "90%": {
-            opacity: "0.3",
+        },
+        "gentle-wave": {
+          "0%, 100%": {
+            transform: "translateX(0%) translateY(0%) rotate(0deg)",
+            opacity: "0.1",
           },
-          "100%": {
-            transform: "translateX(calc(100vw + 100px)) translateY(-10px)",
-            opacity: "0",
+          "33%": {
+            transform: "translateX(2%) translateY(-1%) rotate(1deg)",
+            opacity: "0.15",
+          },
+          "66%": {
+            transform: "translateX(-1%) translateY(2%) rotate(-0.5deg)",
+            opacity: "0.12",
           },
         },
-        "current-flow": {
-          "0%": {
-            transform: "translateX(-100%)",
+        "morph": {
+          "0%, 100%": {
+            borderRadius: "50% 50% 50% 50%",
+            transform: "scale(1) rotate(0deg)",
           },
-          "100%": {
-            transform: "translateX(100%)",
+          "25%": {
+            borderRadius: "60% 40% 50% 50%",
+            transform: "scale(1.05) rotate(90deg)",
+          },
+          "50%": {
+            borderRadius: "50% 60% 40% 50%",
+            transform: "scale(0.95) rotate(180deg)",
+          },
+          "75%": {
+            borderRadius: "50% 50% 60% 40%",
+            transform: "scale(1.02) rotate(270deg)",
           },
         },
       },
