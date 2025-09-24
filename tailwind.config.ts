@@ -117,6 +117,30 @@ export default {
             transform: "translateY(-20px) rotate(5deg)",
           },
         },
+        "flow-right": {
+          "0%": {
+            transform: "translateX(-100px) translateY(0px)",
+            opacity: "0",
+          },
+          "10%": {
+            opacity: "0.3",
+          },
+          "90%": {
+            opacity: "0.3",
+          },
+          "100%": {
+            transform: "translateX(calc(100vw + 100px)) translateY(-10px)",
+            opacity: "0",
+          },
+        },
+        "current-flow": {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
