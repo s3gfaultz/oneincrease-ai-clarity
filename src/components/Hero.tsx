@@ -4,25 +4,37 @@ import { ArrowRight, Shield, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
-      {/* Animated Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 animate-[float_20s_ease-in-out_infinite] transform scale-105"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
-      {/* Interactive Geometric Pattern Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Flowing Background Layers */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-hero rounded-full opacity-30 blur-xl animate-[float_8s_ease-in-out_infinite]"></div>
-        <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-accent rounded-full opacity-35 blur-lg animate-[float_12s_ease-in-out_infinite_reverse]"></div>
-        <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-blue-red rounded-full opacity-40 blur-md animate-[float_6s_ease-in-out_infinite]"></div>
-        <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-gradient-secondary rounded-full opacity-25 blur-lg animate-[float_10s_ease-in-out_infinite_reverse]"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-12 h-12 bg-gradient-hero rounded-full opacity-30 blur-md animate-[float_7s_ease-in-out_infinite]"></div>
+        {/* Main flowing gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 via-orange-500/30 to-blue-500/20 animate-[flow_15s_ease-in-out_infinite]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/15 via-purple-500/25 to-red-500/15 animate-[flow_20s_ease-in-out_infinite_reverse]"></div>
         
-        {/* Moving grid pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(0_72%_51%),transparent_70%)] animate-[spin_30s_linear_infinite]"></div>
+        {/* Animated flowing particles */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          {/* Large flowing orbs */}
+          <div className="absolute top-1/4 w-96 h-96 bg-gradient-radial from-red-500/30 to-transparent rounded-full blur-3xl animate-[flowRight_25s_linear_infinite]"></div>
+          <div className="absolute top-2/3 w-80 h-80 bg-gradient-radial from-blue-500/25 to-transparent rounded-full blur-3xl animate-[flowRight_30s_linear_infinite] animation-delay-[5s]"></div>
+          <div className="absolute top-1/2 w-72 h-72 bg-gradient-radial from-orange-500/35 to-transparent rounded-full blur-2xl animate-[flowRight_20s_linear_infinite] animation-delay-[10s]"></div>
+          
+          {/* Medium flowing elements */}
+          <div className="absolute top-1/6 w-48 h-48 bg-gradient-radial from-purple-500/20 to-transparent rounded-full blur-xl animate-[flowRight_18s_linear_infinite] animation-delay-[3s]"></div>
+          <div className="absolute bottom-1/4 w-56 h-56 bg-gradient-radial from-cyan-500/25 to-transparent rounded-full blur-xl animate-[flowRight_22s_linear_infinite] animation-delay-[8s]"></div>
+          
+          {/* Small flowing particles */}
+          <div className="absolute top-1/3 w-24 h-24 bg-gradient-radial from-red-400/40 to-transparent rounded-full blur-sm animate-[flowRight_12s_linear_infinite] animation-delay-[2s]"></div>
+          <div className="absolute bottom-1/3 w-32 h-32 bg-gradient-radial from-orange-400/35 to-transparent rounded-full blur-sm animate-[flowRight_16s_linear_infinite] animation-delay-[6s]"></div>
+          <div className="absolute top-3/4 w-20 h-20 bg-gradient-radial from-blue-400/45 to-transparent rounded-full blur-sm animate-[flowRight_14s_linear_infinite] animation-delay-[4s]"></div>
         </div>
+        
+        {/* Flowing wave overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,transparent,hsl(0_72%_51%/0.1),transparent,hsl(217_91%_60%/0.1),transparent)] animate-[wave_25s_ease-in-out_infinite]"></div>
+        </div>
+        
+        {/* Subtle texture overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,hsl(0_72%_51%/0.05),transparent_50%),radial-gradient(circle_at_80%_50%,hsl(217_91%_60%/0.05),transparent_50%)] animate-[textureFlow_30s_linear_infinite]"></div>
       </div>
       
       {/* Content */}

@@ -70,6 +70,7 @@ export default {
         "gradient-glass": "var(--gradient-glass)",
         "gradient-accent": "var(--gradient-accent)",
         "gradient-blue-red": "var(--gradient-blue-red)",
+        "gradient-radial": "radial-gradient(circle, var(--tw-gradient-stops))",
       },
       boxShadow: {
         "luxury": "var(--shadow-luxury)",
@@ -115,6 +116,47 @@ export default {
           },
           "50%": {
             transform: "translateY(-20px) rotate(5deg)",
+          },
+        },
+        "flow": {
+          "0%": {
+            transform: "translateX(-100%) skewX(-15deg)",
+            opacity: "0.3",
+          },
+          "50%": {
+            transform: "translateX(0%) skewX(0deg)",
+            opacity: "0.6",
+          },
+          "100%": {
+            transform: "translateX(100%) skewX(15deg)",
+            opacity: "0.3",
+          },
+        },
+        "flowRight": {
+          "0%": {
+            transform: "translateX(-120%) translateY(0px)",
+          },
+          "100%": {
+            transform: "translateX(120vw) translateY(-20px)",
+          },
+        },
+        "wave": {
+          "0%, 100%": {
+            transform: "rotate(0deg) scale(1)",
+          },
+          "33%": {
+            transform: "rotate(120deg) scale(1.1)",
+          },
+          "66%": {
+            transform: "rotate(240deg) scale(0.9)",
+          },
+        },
+        "textureFlow": {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
           },
         },
       },
