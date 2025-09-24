@@ -5,17 +5,24 @@ import { ArrowRight, Shield, TrendingUp } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
-      {/* Lovable-style Background */}
+      {/* Animated Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 animate-[float_20s_ease-in-out_infinite] transform scale-105"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
-      {/* Geometric Pattern Overlay */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-hero rounded-full opacity-20 blur-xl animate-pulse"></div>
-        <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-accent rounded-full opacity-25 blur-lg animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-blue-red rounded-full opacity-30 blur-md animate-pulse delay-500"></div>
+      {/* Interactive Geometric Pattern Overlay */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-hero rounded-full opacity-30 blur-xl animate-[float_8s_ease-in-out_infinite]"></div>
+        <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-accent rounded-full opacity-35 blur-lg animate-[float_12s_ease-in-out_infinite_reverse]"></div>
+        <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-blue-red rounded-full opacity-40 blur-md animate-[float_6s_ease-in-out_infinite]"></div>
+        <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-gradient-secondary rounded-full opacity-25 blur-lg animate-[float_10s_ease-in-out_infinite_reverse]"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-12 h-12 bg-gradient-hero rounded-full opacity-30 blur-md animate-[float_7s_ease-in-out_infinite]"></div>
+        
+        {/* Moving grid pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(0_72%_51%),transparent_70%)] animate-[spin_30s_linear_infinite]"></div>
+        </div>
       </div>
       
       {/* Content */}
@@ -39,11 +46,11 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="glass-red" size="lg" className="group">
+          <Button variant="hero" size="lg" className="group shadow-red">
             Get Started Today
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
-          <Button variant="glass-blue" size="lg">
+          <Button variant="glass" size="lg" className="bg-white/20 backdrop-blur-md border-2 border-white/30 text-white font-semibold hover:bg-white/30 hover:shadow-blue">
             Watch Demo
           </Button>
         </div>
