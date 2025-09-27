@@ -49,29 +49,31 @@ ${formData.message}`;
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Manufacturing?
+            Ready To Transform Your Manufacturing Process?
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Connect with our AI experts and discover how oneincrease can revolutionize your operations.
+            Connect with our AI experts and discover how we can revolutionize your operations.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <Card className="p-8 bg-white/10 backdrop-blur-glass border border-white/20 shadow-luxury">
-            <h3 className="text-2xl font-bold mb-6 text-primary-foreground">Get in Touch</h3>
+          <Card className="p-8 bg-white/10 backdrop-blur-glass border border-white/20 shadow-luxury h-full flex flex-col justify-between">
+            <h3 className="text-2xl font-bold mb-6 text-primary-foreground">Contact us</h3>
+            <h2 className="text-lg text-primary-foreground/80 mb-8">We are eager to learn more about your business and how we can contribute to its success!</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-primary-foreground">Name</Label>
                   <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="John Doe"
+                  className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
                   />
                 </div>
                 <div className="space-y-2">
@@ -82,6 +84,7 @@ ${formData.message}`;
                     type="email"
                     value={formData.email}
                     onChange={handleInputChange}
+                    placeholder="JohnDoe@gmail.com"
                     required
                     className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
                   />
@@ -95,6 +98,7 @@ ${formData.message}`;
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
+                  placeholder="OneIncrease"
                   className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-accent"
                 />
               </div>

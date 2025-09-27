@@ -52,7 +52,7 @@ const Products = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
               
               <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex flex-wrap items-center gap-4 mb-6">
                   <div className="p-3 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/10 group-hover:border-white/20 transition-all duration-300">
                     <product.icon className="w-8 h-8 text-primary" />
                   </div>

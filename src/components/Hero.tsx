@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/lovable-bg.jpg";
-import { ArrowRight, Shield, TrendingUp } from "lucide-react";
+import { ArrowRight, TrendingUp, Cpu } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -30,10 +29,10 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center mt-8">
         <div className="flex items-center justify-center gap-3 mb-6">
-          <Shield className="w-6 h-6 text-primary" />
-          <span className="text-sm font-medium tracking-wide uppercase text-foreground">Secure AI Manufacturing</span>
+          <Cpu className="w-6 h-6 text-primary" />
+          <span className="text-sm font-medium tracking-wide text-foreground">Smart AI Planning For Smart Manufacturers</span>
           <TrendingUp className="w-6 h-6 text-accent" />
         </div>
         
@@ -59,7 +58,7 @@ const Hero = () => {
           </Button>
         </div>
         
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
           <div className="group p-6 rounded-lg bg-white/50 backdrop-blur-sm border border-white/20 hover:shadow-red transition-all duration-300">
             <div className="text-3xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-2">99.2%</div>
             <div className="text-sm text-muted-foreground">Prediction Accuracy</div>
