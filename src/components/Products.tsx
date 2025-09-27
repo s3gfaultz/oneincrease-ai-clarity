@@ -75,7 +75,7 @@ const Products = () => {
                   ))}
                 </ul>
 
-                <Button variant="outline" className="w-full group border-primary/20 hover:bg-primary/10 hover:border-primary/40">
+                <Button variant="glass" className="w-full group text-foreground hover:text-foreground">
                   Learn More
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </Button>
