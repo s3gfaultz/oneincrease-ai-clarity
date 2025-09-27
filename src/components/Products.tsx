@@ -45,42 +45,42 @@ const Products = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <Card 
-              key={product.name}
-              className="group p-8 bg-gradient-card shadow-card hover:shadow-luxury transition-all duration-500 ease-luxury border-0 relative overflow-hidden"
-            >
-              {/* Background gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              
-              <div className="relative z-10">
-                <div className="flex flex-wrap items-center gap-4 mb-6">
-                  <div className="p-3 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/10 group-hover:border-white/20 transition-all duration-300">
-                    <product.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">{product.name}</h3>
-                    <p className="text-sm font-medium bg-gradient-accent bg-clip-text text-transparent">{product.title}</p>
-                  </div>
-                </div>
+  key={product.name}
+  className="group p-8 bg-gradient-card shadow-card hover:shadow-luxury transition-all duration-500 ease-luxury border-0 relative overflow-hidden flex flex-col justify-between"
+>
+  {/* Background gradient */}
+  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+  
+  <div className="relative z-10">
+    <div className="flex flex-wrap items-center gap-4 mb-6">
+      <div className="p-3 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/10 group-hover:border-white/20 transition-all duration-300">
+        <product.icon className="w-8 h-8 text-primary" />
+      </div>
+      <div>
+        <h3 className="text-2xl font-bold text-foreground">{product.name}</h3>
+        <p className="text-sm font-medium bg-gradient-accent bg-clip-text text-transparent">{product.title}</p>
+      </div>
+    </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {product.description}
-                </p>
+    <p className="text-muted-foreground mb-6 leading-relaxed">
+      {product.description}
+    </p>
 
-                <ul className="space-y-2 mb-8">
-                  {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-accent" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+    <ul className="space-y-2 mb-8">
+      {product.features.map((feature, idx) => (
+        <li key={idx} className="flex items-center gap-2 text-sm">
+          <div className="w-1.5 h-1.5 rounded-full bg-gradient-accent" />
+          <span className="text-muted-foreground">{feature}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
 
-                <Button variant="glass" className="w-full group text-foreground hover:text-foreground">
-                  Learn More
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                </Button>
-              </div>
-            </Card>
+  <Button variant="glass" className="w-full group text-foreground hover:text-foreground relative z-10 mt-4">
+    Learn More
+    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+  </Button>
+</Card>
           ))}
         </div>
       </div>
