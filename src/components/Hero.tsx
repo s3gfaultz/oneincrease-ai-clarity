@@ -27,10 +27,6 @@ const Hero = () => {
         {/* Morphing shapes */}
         <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-secondary rounded-full opacity-10 blur-xl animate-[morph-scale_15s_ease-in-out_infinite]"></div>
         <div className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-hero rounded-full opacity-15 blur-2xl animate-[morph-scale_18s_ease-in-out_infinite] animation-delay-3000"></div>
-        
-        {/* Diagonal streaks */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-[streak_8s_ease-in-out_infinite]"></div>
-        <div className="absolute bottom-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/20 to-transparent animate-[streak_12s_ease-in-out_infinite] animation-delay-4000"></div>
       </div>
       
       {/* Content */}
