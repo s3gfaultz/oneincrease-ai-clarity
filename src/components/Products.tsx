@@ -10,7 +10,7 @@ const Products = () => {
       title: "AI Demand Prediction",
       description: "Advanced AI model that predicts future orders based on historical data, market trends, and seasonal patterns. Reduce inventory costs while ensuring demand fulfillment.",
       features: ["Historical data analysis", "Market trend integration", "Seasonal pattern recognition", "95%+ accuracy rate"],
-      color: "from-primary/20 to-accent/20"
+      color: "from-primary/10 to-accent/10"
     },
     {
       name: "Dexter", 
@@ -18,7 +18,7 @@ const Products = () => {
       title: "Smart Machine Scheduler",
       description: "Intelligent scheduling system that optimizes machine utilization, reduces downtime, and improves overall production efficiency through AI-driven resource allocation.",
       features: ["Real-time scheduling", "Downtime minimization", "Resource optimization", "40% efficiency boost"],
-      color: "from-secondary/20 to-primary/20"
+      color: "from-secondary/10 to-primary/10"
     },
     {
       name: "Zain",
@@ -26,12 +26,12 @@ const Products = () => {
       title: "Performance Analytics",
       description: "Comprehensive performance analyzer that monitors capacity utilization, identifies bottlenecks, and provides actionable insights to maximize operational efficiency.",
       features: ["Capacity monitoring", "Bottleneck identification", "Performance metrics", "Real-time dashboards"],
-      color: "from-accent/20 to-success/20"
+      color: "from-accent/10 to-secondary/10"
     }
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background/50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -75,7 +75,7 @@ const Products = () => {
                   ))}
                 </ul>
 
-                <Button variant="glass" className="w-full group">
+                <Button variant="outline" className="w-full group border-primary/20 hover:bg-primary/10 hover:border-primary/40">
                   Learn More
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </Button>
