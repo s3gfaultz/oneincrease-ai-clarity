@@ -109,46 +109,87 @@ export default {
             height: "0",
           },
         },
-        "breathe": {
+        "float-up": {
+          "0%": {
+            transform: "translateY(100vh) scale(0)",
+            opacity: "0",
+          },
+          "10%": {
+            opacity: "1",
+          },
+          "90%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(-100px) scale(1)",
+            opacity: "0",
+          },
+        },
+        "pulse-glow": {
           "0%, 100%": {
             transform: "scale(1)",
             opacity: "0.2",
           },
           "50%": {
             transform: "scale(1.1)",
-            opacity: "0.3",
+            opacity: "0.4",
           },
         },
-        "gentle-wave": {
-          "0%, 100%": {
-            transform: "translateX(0%) translateY(0%) rotate(0deg)",
-            opacity: "0.1",
-          },
-          "33%": {
-            transform: "translateX(2%) translateY(-1%) rotate(1deg)",
-            opacity: "0.15",
-          },
-          "66%": {
-            transform: "translateX(-1%) translateY(2%) rotate(-0.5deg)",
-            opacity: "0.12",
-          },
-        },
-        "morph": {
-          "0%, 100%": {
-            borderRadius: "50% 50% 50% 50%",
-            transform: "scale(1) rotate(0deg)",
-          },
-          "25%": {
-            borderRadius: "60% 40% 50% 50%",
-            transform: "scale(1.05) rotate(90deg)",
+        "flow-right": {
+          "0%": {
+            transform: "translateX(-100%) skewX(-15deg)",
+            opacity: "0",
           },
           "50%": {
-            borderRadius: "50% 60% 40% 50%",
-            transform: "scale(0.95) rotate(180deg)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateX(100%) skewX(-15deg)",
+            opacity: "0",
+          },
+        },
+        "flow-left": {
+          "0%": {
+            transform: "translateX(100%) skewX(15deg)",
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateX(-100%) skewX(15deg)",
+            opacity: "0",
+          },
+        },
+        "morph-scale": {
+          "0%, 100%": {
+            borderRadius: "50%",
+            transform: "scale(1)",
+          },
+          "25%": {
+            borderRadius: "60% 40%",
+            transform: "scale(1.1)",
+          },
+          "50%": {
+            borderRadius: "40% 60%",
+            transform: "scale(0.9)",
           },
           "75%": {
-            borderRadius: "50% 50% 60% 40%",
-            transform: "scale(1.02) rotate(270deg)",
+            borderRadius: "55% 45%",
+            transform: "scale(1.05)",
+          },
+        },
+        "streak": {
+          "0%": {
+            transform: "translateX(-100%) skewX(-45deg)",
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateX(100%) skewX(-45deg)",
+            opacity: "0",
           },
         },
       },

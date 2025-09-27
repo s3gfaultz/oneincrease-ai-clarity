@@ -6,27 +6,31 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
       {/* Animated Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 animate-[float_20s_ease-in-out_infinite] transform scale-105"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
-      {/* Organic Ambient Overlay */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Breathing light orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[breathe_8s_ease-in-out_infinite]"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[breathe_10s_ease-in-out_infinite] animation-delay-2000"></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[breathe_6s_ease-in-out_infinite] animation-delay-4000"></div>
+        {/* Floating particles */}
+        <div className="absolute top-20 left-10 w-4 h-4 bg-primary/30 rounded-full animate-[float-up_12s_linear_infinite]"></div>
+        <div className="absolute top-32 left-1/4 w-3 h-3 bg-accent/40 rounded-full animate-[float-up_15s_linear_infinite] animation-delay-2000"></div>
+        <div className="absolute top-40 right-1/3 w-2 h-2 bg-primary/50 rounded-full animate-[float-up_18s_linear_infinite] animation-delay-4000"></div>
+        <div className="absolute top-60 right-20 w-5 h-5 bg-accent/30 rounded-full animate-[float-up_14s_linear_infinite] animation-delay-6000"></div>
         
-        {/* Gentle wave overlay */}
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[pulse-glow_8s_ease-in-out_infinite]"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[pulse-glow_10s_ease-in-out_infinite] animation-delay-2000"></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[pulse-glow_6s_ease-in-out_infinite] animation-delay-4000"></div>
+        
+        {/* Flowing waves */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-accent/20 animate-[gentle-wave_20s_ease-in-out_infinite]"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-accent/20 via-transparent to-primary/30 animate-[gentle-wave_25s_ease-in-out_infinite] animation-delay-5000"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/20 animate-[flow-right_20s_ease-in-out_infinite]"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-accent/20 via-transparent to-primary/30 animate-[flow-left_25s_ease-in-out_infinite] animation-delay-5000"></div>
         </div>
         
-        {/* Subtle morphing shapes */}
-        <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-secondary rounded-full opacity-10 blur-xl animate-[morph_15s_ease-in-out_infinite]"></div>
-        <div className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-hero rounded-full opacity-15 blur-2xl animate-[morph_18s_ease-in-out_infinite] animation-delay-3000"></div>
+        {/* Morphing shapes */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-secondary rounded-full opacity-10 blur-xl animate-[morph-scale_15s_ease-in-out_infinite]"></div>
+        <div className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-hero rounded-full opacity-15 blur-2xl animate-[morph-scale_18s_ease-in-out_infinite] animation-delay-3000"></div>
+        
+        {/* Diagonal streaks */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-[streak_8s_ease-in-out_infinite]"></div>
+        <div className="absolute bottom-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/20 to-transparent animate-[streak_12s_ease-in-out_infinite] animation-delay-4000"></div>
       </div>
       
       {/* Content */}
