@@ -109,6 +109,30 @@ export default {
             height: "0",
           },
         },
+        "orbit-large": {
+          "0%": {
+            transform: "translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg)",
+          },
+          "100%": {
+            transform: "translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg)",
+          },
+        },
+        "orbit-medium": {
+          "0%": {
+            transform: "translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg)",
+          },
+          "100%": {
+            transform: "translate(-50%, -50%) rotate(-360deg) translateX(100px) rotate(360deg)",
+          },
+        },
+        "orbit-small": {
+          "0%": {
+            transform: "translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg)",
+          },
+          "100%": {
+            transform: "translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg)",
+          },
+        },
         "float-up": {
           "0%": {
             transform: "translateY(100vh) scale(0)",
