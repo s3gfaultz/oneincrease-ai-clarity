@@ -5,12 +5,17 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">        
-        {/* Glowing orbs with looping movement - positioned lower and slightly bigger */}
-        <div className="absolute top-2/3 left-1/2 w-[26rem] h-[26rem] bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-2/3 left-1/2 w-[22rem] h-[22rem] bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-2/3 left-1/2 w-[18rem] h-[18rem] bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-2/3 left-1/2 w-[14rem] h-[14rem] bg-gradient-secondary rounded-full opacity-8 blur-xl animate-[orbit-large_30s_linear_infinite_reverse] -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Floating particles */}
+        <div className="absolute top-20 left-10 w-4 h-4 bg-primary/30 rounded-full animate-[float-up_12s_linear_infinite]"></div>
+        <div className="absolute top-32 left-1/4 w-3 h-3 bg-accent/40 rounded-full animate-[float-up_15s_linear_infinite] animation-delay-2000"></div>
+        <div className="absolute top-40 right-1/3 w-2 h-2 bg-primary/50 rounded-full animate-[float-up_18s_linear_infinite] animation-delay-4000"></div>
+        <div className="absolute top-60 right-20 w-5 h-5 bg-accent/30 rounded-full animate-[float-up_14s_linear_infinite] animation-delay-6000"></div>
+        
+        {/* Glowing orbs with looping movement */}
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
         
         {/* Flowing waves */}
         <div className="absolute inset-0 opacity-10">
