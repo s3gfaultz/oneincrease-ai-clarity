@@ -74,7 +74,7 @@ ${formData.message}`;
                   required
                   spellCheck={false}
                   placeholder="John Doe"
-                   className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus:ring-0 focus:ring-offset-0"
+                   className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
                   />
                 </div>
                 <div className="space-y-2">
@@ -88,7 +88,7 @@ ${formData.message}`;
                     placeholder="JohnDoe@gmail.com"
                     required
                     spellCheck={false}
-                     className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus:ring-0 focus:ring-offset-0"
+                     className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
                   />
                 </div>
               </div>
@@ -102,7 +102,7 @@ ${formData.message}`;
                   onChange={handleInputChange}
                   placeholder="OneIncrease"
                   spellCheck={false}
-                  className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus:ring-0 focus:ring-offset-0"
+                  className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
                 />
               </div>
               
@@ -116,7 +116,7 @@ ${formData.message}`;
                   rows={5}
                   required
                   spellCheck={false}
-                  className="resize-none bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus:ring-0 focus:ring-offset-0"
+                  className="resize-none bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-white focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
                   placeholder="Tell us about your manufacturing challenges and goals..."
                 />
               </div>
