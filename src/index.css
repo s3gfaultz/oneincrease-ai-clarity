@@ -139,6 +139,18 @@ All colors MUST be HSL.
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
+  /* Prevent browser autocomplete from changing input background */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    background-color: rgba(233, 222, 222, 0.76) !important;
+    color: white !important;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+    /* -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.925) inset !important; */
+    transition: background-color 5000s ease-in-out 0.2s;
+    caret-color: white;
+    
+  }
 
 
 }
