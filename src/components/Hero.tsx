@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="absolute top-2/3 left-1/2 w-[26rem] h-[26rem] bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute top-2/3 left-1/2 w-[22rem] h-[22rem] bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute top-2/3 left-1/2 w-[18rem] h-[18rem] bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-2/3 left-1/2 w-[14rem] h-[14rem] bg-gradient-secondary rounded-full opacity-18 blur-xl animate-[orbit-large_30s_linear_infinite_reverse] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-2/3 left-1/2 w-[14rem] h-[14rem] bg-gradient-secondary rounded-full opacity-8 blur-xl animate-[orbit-large_30s_linear_infinite_reverse] -translate-x-1/2 -translate-y-1/2"></div>
         
         {/* Flowing waves */}
         <div className="absolute inset-0 opacity-10">
