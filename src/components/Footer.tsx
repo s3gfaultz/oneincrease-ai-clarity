@@ -9,7 +9,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-secondary border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-gradient-secondary-inverted border-t border-white/10 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-hero rounded-full blur-3xl"></div>

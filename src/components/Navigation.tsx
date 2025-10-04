@@ -1,8 +1,9 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("hero");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -12,31 +13,76 @@ const Navigation = () => {
     }
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of a section is visible
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-background/95 via-accent/5 to-background/95 backdrop-blur-glass border-b border-white/10 shadow-luxury">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-white/10 backdrop-blur-glass shadow-luxury transition-all duration-700
+        ${
+          activeSection === "contact"
+            ? "bg-gradient-blue-blue shadow-lg shadow-blue-500/20"
+            : "bg-gradient-to-r from-background/95 via-accent/5 to-background/95"
+        }`}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
+          <div
+            onClick={() => scrollToSection("hero")}
+            className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer"
+          >
             OneIncrease
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("hero")}
-              className="relative font-medium text-foreground/80 hover:text-foreground transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-hero after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
+                ${
+                  activeSection === "hero"
+                    ? "text-foreground after:w-full after:bg-gradient-hero"
+                    : "text-foreground/80 hover:text-foreground after:bg-gradient-hero"
+                }`}
             >
               Home
             </button>
+
             <button
               onClick={() => scrollToSection("products")}
-              className="relative font-medium text-foreground/80 hover:text-foreground transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-accent after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
+                ${
+                  activeSection === "products"
+                    ? "text-foreground after:w-full after:bg-gradient-red-blue"
+                    : "text-foreground/80 hover:text-foreground after:bg-gradient-red-blue"
+                    
+                }`}
             >
               Products
             </button>
+
             <button
               onClick={() => scrollToSection("contact")}
-              className="relative font-medium text-foreground/80 hover:text-foreground transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-secondary after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
+                ${
+                  activeSection === "contact"
+                    ? "after:w-full after:bg-gradient-full-blue"
+                    : "text-foreground/80 hover:text-foreground after:bg-gradient-full-blue"
+                }`}
             >
               Contact
             </button>
@@ -58,24 +104,19 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 flex flex-col gap-4 pb-4 animate-fade-in">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="font-medium text-left py-2 px-4 rounded-lg bg-white/5 hover:bg-white/10 text-foreground/80 hover:text-foreground transition-all duration-300"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("products")}
-              className="font-medium text-left py-2 px-4 rounded-lg bg-white/5 hover:bg-white/10 text-foreground/80 hover:text-foreground transition-all duration-300"
-            >
-              Products
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="font-medium text-left py-2 px-4 rounded-lg bg-white/5 hover:bg-white/10 text-foreground/80 hover:text-foreground transition-all duration-300"
-            >
-              Contact
-            </button>
+            {["hero", "products", "contact"].map((id) => (
+              <button
+                key={id}
+                onClick={() => scrollToSection(id)}
+                className={`font-medium text-left py-2 px-4 rounded-lg transition-all duration-300 ${
+                  activeSection === id
+                    ? "bg-white/15 text-white"
+                    : "bg-white/5 hover:bg-white/10 text-foreground/80 hover:text-foreground"
+                }`}
+              >
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </button>
+            ))}
           </div>
         )}
       </div>

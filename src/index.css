@@ -48,11 +48,16 @@ All colors MUST be HSL.
     /* Dynamic gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 72% 51%), hsl(25 95% 53%));
     --gradient-secondary: linear-gradient(135deg, hsl(217 91% 60%), hsl(0 72% 51%));
+    --gradient-red-blue: linear-gradient(135deg,  hsl(0 72% 51%), hsl(217 91% 60%));
+    --gradient-secondary-inverted: linear-gradient(135deg, hsl(252, 33%, 55%), hsl(356 62 50));
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(217 91% 98%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(217 91% 97%));
     --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.1), hsl(217 91% 60% / 0.1));
     --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(0 72% 51%));
+    --gradient-full-blue: linear-gradient(135deg, hsl(214, 79%, 50%), hsl(244, 84%, 49%));
     --gradient-blue-red: linear-gradient(135deg, hsl(217 91% 60%), hsl(0 72% 51%));
+
+    
     
     /* Colorful shadows */
     --shadow-luxury: 0 25px 50px -12px hsl(0 72% 51% / 0.25);

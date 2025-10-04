@@ -70,6 +70,9 @@ export default {
         "gradient-glass": "var(--gradient-glass)",
         "gradient-accent": "var(--gradient-accent)",
         "gradient-blue-red": "var(--gradient-blue-red)",
+        "gradient-full-blue": "var(--gradient-full-blue)",
+        "gradient-secondary-inverted": "var(--gradient-secondary-inverted)",
+        "gradient-red-blue": "var(--gradient-red-blue)",
       },
       boxShadow: {
         "luxury": "var(--shadow-luxury)",
