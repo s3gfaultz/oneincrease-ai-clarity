@@ -3,7 +3,7 @@ import { ArrowRight, TrendingUp, Cpu } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating particles */}
