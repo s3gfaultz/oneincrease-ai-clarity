@@ -57,7 +57,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div
-            onClick={() => scrollToSection("hero")}
+            onClick={() => scrollToSection("Home")}
             className={`text-2xl font-bold hover:opacity-80 transition-opacity cursor-pointer ${
               isContactSection
                 ? "text-white"
@@ -132,7 +132,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection(id)}
                 className={`font-medium text-left py-2 px-4 rounded-lg transition-all duration-300 ${
                   activeSection === id
-                    ? "bg-white/15 text-white"
+                    ? "bg-white/15 text-orange-500"
                     : isContactSection
                     ? "bg-white/5 hover:bg-white/10 text-white/80 hover:text-white"
                     : "bg-white/5 hover:bg-white/10 text-foreground/80 hover:text-foreground"
