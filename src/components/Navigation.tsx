@@ -25,15 +25,15 @@ const Navigation = () => {
         const productsRect = productsSection.getBoundingClientRect();
         
         // Navigation bar height is approximately 72px, check if contact is within 80px of top
-        if (contactRect.top <= 80) {
+        if (contactRect.top <= 80 && contactRect.top >= 0) {
           setActiveSection("contact");
         } else if (productsRect.top <= window.innerHeight / 2 && productsRect.bottom >= window.innerHeight / 2) {
           setActiveSection("products");
         } else if (heroRect.top <= window.innerHeight / 2 && heroRect.bottom >= window.innerHeight / 2) {
           setActiveSection("hero");
-        } else if (productsRect.top > 0 && productsRect.top < window.innerHeight / 2) {
+        } else if (productsRect.top > 0 && productsRect.top < window.innerHeight) {
           setActiveSection("products");
-        } else if (heroRect.bottom > window.innerHeight / 2) {
+        } else {
           setActiveSection("hero");
         }
       }
