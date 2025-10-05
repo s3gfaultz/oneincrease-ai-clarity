@@ -16,25 +16,23 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const contactSection = document.getElementById("contact");
-      const heroSection = document.getElementById("hero");
       const productsSection = document.getElementById("products");
       
-      if (contactSection && heroSection && productsSection) {
+      if (contactSection && productsSection) {
         const contactRect = contactSection.getBoundingClientRect();
-        const heroRect = heroSection.getBoundingClientRect();
         const productsRect = productsSection.getBoundingClientRect();
         
         // Navigation bar height is approximately 72px, check if contact is within 80px of top
-        if (contactRect.top <= 80 && contactRect.top >= 0) {
+        if (contactRect.top <= 80 && contactRect.top >= -100) {
           setActiveSection("contact");
-        } else if (productsRect.top <= window.innerHeight / 2 && productsRect.bottom >= window.innerHeight / 2) {
+        } else if (productsRect.top < window.innerHeight / 2 && productsRect.bottom > window.innerHeight / 2) {
           setActiveSection("products");
-        } else if (heroRect.top <= window.innerHeight / 2 && heroRect.bottom >= window.innerHeight / 2) {
-          setActiveSection("hero");
-        } else if (productsRect.top > 0 && productsRect.top < window.innerHeight) {
+        } else if (productsRect.bottom > 0 && productsRect.top < 0) {
           setActiveSection("products");
-        } else {
+        } else if (productsRect.top > window.innerHeight / 2) {
           setActiveSection("hero");
+        } else if (contactRect.top > 80) {
+          setActiveSection("products");
         }
       }
     };
