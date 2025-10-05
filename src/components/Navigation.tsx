@@ -19,11 +19,19 @@ const Navigation = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            // For contact section, only activate when it's near the top (within 100px)
+            if (entry.target.id === "contact") {
+              const rect = entry.target.getBoundingClientRect();
+              if (rect.top <= 100) {
+                setActiveSection(entry.target.id);
+              }
+            } else {
+              setActiveSection(entry.target.id);
+            }
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of a section is visible
+      { threshold: [0, 0.1, 0.5, 1] } // Multiple thresholds for better detection
     );
 
     sections.forEach((section) => observer.observe(section));
