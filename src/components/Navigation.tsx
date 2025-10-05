@@ -14,28 +14,35 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // For contact section, only activate when it's near the top (within 100px)
-            if (entry.target.id === "contact") {
-              const rect = entry.target.getBoundingClientRect();
-              if (rect.top <= 100) {
-                setActiveSection(entry.target.id);
-              }
-            } else {
-              setActiveSection(entry.target.id);
-            }
-          }
-        });
-      },
-      { threshold: [0, 0.1, 0.5, 1] } // Multiple thresholds for better detection
-    );
+    const handleScroll = () => {
+      const contactSection = document.getElementById("contact");
+      const heroSection = document.getElementById("hero");
+      const productsSection = document.getElementById("products");
+      
+      if (contactSection && heroSection && productsSection) {
+        const contactRect = contactSection.getBoundingClientRect();
+        const heroRect = heroSection.getBoundingClientRect();
+        const productsRect = productsSection.getBoundingClientRect();
+        
+        // Navigation bar height is approximately 72px, check if contact is within 80px of top
+        if (contactRect.top <= 80) {
+          setActiveSection("contact");
+        } else if (productsRect.top <= window.innerHeight / 2 && productsRect.bottom >= window.innerHeight / 2) {
+          setActiveSection("products");
+        } else if (heroRect.top <= window.innerHeight / 2 && heroRect.bottom >= window.innerHeight / 2) {
+          setActiveSection("hero");
+        } else if (productsRect.top > 0 && productsRect.top < window.innerHeight / 2) {
+          setActiveSection("products");
+        } else if (heroRect.bottom > window.innerHeight / 2) {
+          setActiveSection("hero");
+        }
+      }
+    };
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+    
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const isContactSection = activeSection === "contact";
