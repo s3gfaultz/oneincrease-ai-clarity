@@ -30,20 +30,26 @@ const Navigation = () => {
     return () => observer.disconnect();
   }, []);
 
+  const isContactSection = activeSection === "contact";
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 border-b border-white/10 backdrop-blur-glass shadow-luxury transition-all duration-700
+      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-glass shadow-luxury transition-all duration-700
         ${
-          activeSection === "contact"
-            ? "bg-gradient-blue-blue shadow-lg shadow-blue-500/20"
-            : "bg-gradient-to-r from-background/95 via-accent/5 to-background/95"
+          isContactSection
+            ? "bg-gradient-secondary border-white/20"
+            : "bg-gradient-to-r from-background/95 via-accent/5 to-background/95 border-white/10"
         }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer"
+            className={`text-2xl font-bold hover:opacity-80 transition-opacity cursor-pointer ${
+              isContactSection
+                ? "text-white"
+                : "bg-gradient-hero bg-clip-text text-transparent"
+            }`}
           >
             OneIncrease
           </div>
@@ -54,7 +60,9 @@ const Navigation = () => {
               onClick={() => scrollToSection("hero")}
               className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
                 ${
-                  activeSection === "hero"
+                  isContactSection
+                    ? "text-white/80 hover:text-white after:bg-white"
+                    : activeSection === "hero"
                     ? "text-foreground after:w-full after:bg-gradient-hero"
                     : "text-foreground/80 hover:text-foreground after:bg-gradient-hero"
                 }`}
@@ -66,10 +74,11 @@ const Navigation = () => {
               onClick={() => scrollToSection("products")}
               className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
                 ${
-                  activeSection === "products"
+                  isContactSection
+                    ? "text-white/80 hover:text-white after:bg-white"
+                    : activeSection === "products"
                     ? "text-foreground after:w-full after:bg-gradient-red-blue"
                     : "text-foreground/80 hover:text-foreground after:bg-gradient-red-blue"
-                    
                 }`}
             >
               Products
@@ -79,8 +88,8 @@ const Navigation = () => {
               onClick={() => scrollToSection("contact")}
               className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
                 ${
-                  activeSection === "contact"
-                    ? "after:w-full after:bg-gradient-full-blue"
+                  isContactSection
+                    ? "text-white after:w-full after:bg-white"
                     : "text-foreground/80 hover:text-foreground after:bg-gradient-full-blue"
                 }`}
             >
@@ -94,9 +103,9 @@ const Navigation = () => {
             className="md:hidden p-2 rounded-lg bg-gradient-glass backdrop-blur-glass border border-white/20 hover:border-white/40 transition-all"
           >
             {isOpen ? (
-              <X size={24} className="text-foreground" />
+              <X size={24} className={isContactSection ? "text-white" : "text-foreground"} />
             ) : (
-              <Menu size={24} className="text-foreground" />
+              <Menu size={24} className={isContactSection ? "text-white" : "text-foreground"} />
             )}
           </button>
         </div>
@@ -111,6 +120,8 @@ const Navigation = () => {
                 className={`font-medium text-left py-2 px-4 rounded-lg transition-all duration-300 ${
                   activeSection === id
                     ? "bg-white/15 text-white"
+                    : isContactSection
+                    ? "bg-white/5 hover:bg-white/10 text-white/80 hover:text-white"
                     : "bg-white/5 hover:bg-white/10 text-foreground/80 hover:text-foreground"
                 }`}
               >
