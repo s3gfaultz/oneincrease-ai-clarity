@@ -1,8 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Brain, Clock, BarChart3, ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
+  
   const products = [
     {
       name: "Cassandra",
@@ -76,7 +79,11 @@ const Products = () => {
     </ul>
   </div>
 
-  <Button variant="glass" className="w-full group text-foreground hover:text-foreground relative z-10 mt-4">
+  <Button 
+    variant="glass" 
+    className="w-full group text-foreground hover:text-foreground relative z-10 mt-4"
+    onClick={() => navigate(`/product/${product.name.toLowerCase()}`)}
+  >
     Learn More
     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
   </Button>
