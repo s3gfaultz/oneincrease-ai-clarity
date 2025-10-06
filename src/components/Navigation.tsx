@@ -47,7 +47,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-glass shadow-luxury transition-all duration-700
+      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-glass shadow-luxury transition-all duration-500 ease-in-out
         ${
           isContactSection
             ? "bg-gradient-secondary border-white/20"
@@ -58,7 +58,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div
             onClick={() => scrollToSection("Home")}
-            className={`text-2xl font-bold hover:opacity-80 transition-opacity cursor-pointer ${
+            className={`text-2xl font-bold hover:opacity-80 transition-all duration-500 ease-in-out cursor-pointer ${
               isContactSection
                 ? "text-white"
                 : "bg-gradient-hero bg-clip-text text-transparent"
@@ -71,7 +71,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("hero")}
-              className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
+              className={`relative font-medium transition-all duration-500 ease-in-out after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full
                 ${
                   isContactSection
                     ? "text-white/80 hover:text-white after:bg-white"
@@ -85,7 +85,7 @@ const Navigation = () => {
 
             <button
               onClick={() => scrollToSection("products")}
-              className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
+              className={`relative font-medium transition-all duration-500 ease-in-out after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full
                 ${
                   isContactSection
                     ? "text-white/80 hover:text-white after:bg-white"
@@ -99,7 +99,7 @@ const Navigation = () => {
 
             <button
               onClick={() => scrollToSection("contact")}
-              className={`relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full
+              className={`relative font-medium transition-all duration-500 ease-in-out after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full
                 ${
                   isContactSection
                     ? "text-white after:w-full after:bg-white"
