@@ -1,7 +1,18 @@
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
   const scrollToSection = (id: string) => {
+    // If we're not on the home page, navigate to home with hash
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
+    
+    // Otherwise, scroll to the section
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

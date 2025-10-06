@@ -1,11 +1,21 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("hero");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
+    // If we're not on the home page, navigate to home with hash
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
+    
+    // Otherwise, scroll to the section
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -14,6 +24,9 @@ const Navigation = () => {
   };
 
   useEffect(() => {
+    // Only run scroll detection on home page
+    if (location.pathname !== "/") return;
+    
     const handleScroll = () => {
       const contactSection = document.getElementById("contact");
       const productsSection = document.getElementById("products");
@@ -22,26 +35,34 @@ const Navigation = () => {
         const contactRect = contactSection.getBoundingClientRect();
         const productsRect = productsSection.getBoundingClientRect();
         
-        // Navigation bar height is approximately 72px, check if contact is within 80px of top
-        if (contactRect.top <= 80 && contactRect.top >= -100) {
+        if (contactRect.top <= 80 && contactRect.top >= 0) {
           setActiveSection("contact");
-        } else if (productsRect.top < window.innerHeight / 2 && productsRect.bottom > window.innerHeight / 2) {
+        } else if (productsRect.top < window.innerHeight / 2 && productsRect.bottom > 0) {
           setActiveSection("products");
-        } else if (productsRect.bottom > 0 && productsRect.top < 0) {
-          setActiveSection("products");
-        } else if (productsRect.top > window.innerHeight / 2) {
+        } else if (window.scrollY < productsRect.top + window.scrollY - window.innerHeight / 2) {
           setActiveSection("hero");
-        } else if (contactRect.top > 80) {
-          setActiveSection("products");
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
+
+  // Handle hash navigation when landing on home page with hash
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      const id = location.hash.replace("#", "");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const isContactSection = activeSection === "contact";
 
