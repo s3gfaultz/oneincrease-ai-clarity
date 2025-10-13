@@ -111,53 +111,98 @@ const ProductDetails = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-10`} />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+      <section className="relative pt-32 pb-32 overflow-hidden">
+        {/* Animated background elements */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-20`} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent_50%)]" />
+        
+        {/* Floating gradient orbs */}
+        <div className={`absolute top-20 left-10 w-72 h-72 bg-gradient-to-br ${product.color} opacity-20 rounded-full blur-3xl animate-pulse`} />
+        <div className={`absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr ${product.color} opacity-15 rounded-full blur-3xl animate-pulse`} style={{ animationDelay: '1s' }} />
         
         <div className="relative container mx-auto px-6">
           <Button 
             variant="ghost" 
             onClick={() => navigate("/")}
-            className="mb-8 group"
+            className="mb-12 group"
           >
             <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Button>
 
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center p-4 rounded-2xl bg-gradient-glass backdrop-blur-glass border border-white/20 mb-6">
-              <Icon className="w-16 h-16 text-primary" />
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              {product.name}
-            </h1>
-            
-            <p className={`text-2xl md:text-3xl font-medium bg-gradient-to-r ${product.color} bg-clip-text text-transparent mb-6`}>
-              {product.title}
-            </p>
-            
-            <p className="text-xl text-muted-foreground mb-8">
-              {product.tagline}
-            </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Left side - Icon and visual */}
+              <div className="flex justify-center md:justify-start">
+                <div className="relative">
+                  {/* Glow effect behind icon */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-30 rounded-3xl blur-2xl scale-110`} />
+                  
+                  {/* Main icon container */}
+                  <div className={`relative inline-flex items-center justify-center p-12 rounded-3xl bg-gradient-to-br ${product.color} backdrop-blur-glass border border-white/20 shadow-luxury animate-scale-in`}>
+                    <Icon className="w-32 h-32 text-white drop-shadow-2xl" />
+                  </div>
+                  
+                  {/* Floating badge */}
+                  <div className="absolute -bottom-4 -right-4 px-6 py-3 rounded-2xl bg-gradient-hero backdrop-blur-glass border border-white/30 shadow-red animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                    <p className="text-white font-bold text-sm">AI-Powered</p>
+                  </div>
+                </div>
+              </div>
 
-            <Button 
-              size="lg" 
-              onClick={() => navigate("/pricing")}
-              className="bg-gradient-hero hover:opacity-90 transition-opacity text-white border-0"
-            >
-              Get Started Today
-            </Button>
+              {/* Right side - Content */}
+              <div className="text-center md:text-left space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div>
+                  <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                    {product.name}
+                  </h1>
+                  
+                  <p className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${product.color} bg-clip-text text-transparent mb-4`}>
+                    {product.title}
+                  </p>
+                  
+                  <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                    {product.tagline}
+                  </p>
+                </div>
+
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {product.description}
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <Button 
+                    size="lg" 
+                    onClick={() => navigate("/pricing")}
+                    variant="hero"
+                    className="text-lg px-8 py-6 h-auto shadow-red hover:shadow-red/50 transition-all"
+                  >
+                    Get Started Today
+                  </Button>
+                  <Button 
+                    size="lg"
+                    variant="glass"
+                    onClick={() => {
+                      const overview = document.getElementById('overview');
+                      overview?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="text-lg px-8 py-6 h-auto"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Description Section */}
-      <section className="py-16 bg-background/50 backdrop-blur-sm">
+      <section id="overview" className="py-20 bg-background/50 backdrop-blur-sm">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Overview</h2>
+            <h2 className="text-4xl font-bold mb-6">Overview</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               {product.longDescription}
             </p>
