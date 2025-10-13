@@ -28,7 +28,7 @@ Company: ${formData.company}
 Message:
 ${formData.message}`;
     
-    const mailtoLink = `mailto:contact@oneincrease.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:info@oneincrease.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
     
     toast({
@@ -145,7 +145,7 @@ ${formData.message}`;
                 </div>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-primary-foreground/80">contact@oneincrease.com</p>
+                  <p className="text-primary-foreground/80">info@oneincrease.com</p>
                 </div>
               </div>
 
