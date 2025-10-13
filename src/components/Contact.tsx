@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,26 +16,53 @@ const Contact = () => {
     company: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Replace these with your EmailJS credentials
+  const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+  const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Create mailto link
-    const subject = `AI Manufacturing Inquiry from ${formData.name}`;
-    const body = `Name: ${formData.name}
-Email: ${formData.email}
-Company: ${formData.company}
-
-Message:
-${formData.message}`;
-    
-    const mailtoLink = `mailto:contact@oneincrease.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Email client opened",
-      description: "Your default email client should open with the pre-filled message.",
-    });
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          to_email: "info@oneincrease.com"
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or email us directly at info@oneincrease.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -121,8 +149,8 @@ ${formData.message}`;
                 />
               </div>
               
-              <Button type="submit" variant="glass-red" className="w-full group">
-                Send Message
+              <Button type="submit" variant="glass-red" className="w-full group" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </form>
