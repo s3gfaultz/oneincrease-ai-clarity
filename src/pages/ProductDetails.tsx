@@ -113,13 +113,13 @@ const ProductDetails = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-32 overflow-hidden">
         {/* Animated background elements */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-5`} />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.03),transparent_50%)]" />
+        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-20`} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent_50%)]" />
         
         {/* Floating gradient orbs */}
-        <div className={`absolute top-20 left-10 w-72 h-72 bg-gradient-to-br ${product.color} opacity-5 rounded-full blur-3xl animate-pulse`} />
-        <div className={`absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr ${product.color} opacity-5 rounded-full blur-3xl animate-pulse`} style={{ animationDelay: '1s' }} />
+        <div className={`absolute top-20 left-10 w-72 h-72 bg-gradient-to-br ${product.color} opacity-20 rounded-full blur-3xl animate-pulse`} />
+        <div className={`absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr ${product.color} opacity-15 rounded-full blur-3xl animate-pulse`} style={{ animationDelay: '1s' }} />
         
         <div className="relative container mx-auto px-6">
           <Button 
@@ -137,16 +137,16 @@ const ProductDetails = () => {
               <div className="flex justify-center md:justify-start">
                 <div className="relative">
                   {/* Glow effect behind icon */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-10 rounded-3xl blur-2xl scale-110`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-30 rounded-3xl blur-2xl scale-110`} />
                   
                   {/* Main icon container */}
-                  <div className={`relative inline-flex items-center justify-center p-12 rounded-3xl bg-gradient-to-br ${product.color} opacity-20 backdrop-blur-glass border border-border shadow-sm animate-scale-in`}>
-                    <Icon className="w-32 h-32 text-primary" />
+                  <div className={`relative inline-flex items-center justify-center p-12 rounded-3xl bg-gradient-to-br ${product.color} backdrop-blur-glass border border-white/20 shadow-luxury animate-scale-in`}>
+                    <Icon className="w-32 h-32 text-white drop-shadow-2xl" />
                   </div>
                   
                   {/* Floating badge */}
-                  <div className="absolute -bottom-4 -right-4 px-6 py-3 rounded-2xl bg-card backdrop-blur-glass border border-border shadow-sm animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                    <p className="text-foreground font-bold text-sm">AI-Powered</p>
+                  <div className="absolute -bottom-4 -right-4 px-6 py-3 rounded-2xl bg-gradient-hero backdrop-blur-glass border border-white/30 shadow-red animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                    <p className="text-white font-bold text-sm">AI-Powered</p>
                   </div>
                 </div>
               </div>
@@ -175,13 +175,14 @@ const ProductDetails = () => {
                   <Button 
                     size="lg" 
                     onClick={() => navigate("/pricing")}
-                    className="text-lg px-8 py-6 h-auto"
+                    variant="hero"
+                    className="text-lg px-8 py-6 h-auto shadow-red hover:shadow-red/50 transition-all"
                   >
                     Get Started Today
                   </Button>
                   <Button 
                     size="lg"
-                    variant="outline"
+                    variant="glass"
                     onClick={() => {
                       const overview = document.getElementById('overview');
                       overview?.scrollIntoView({ behavior: 'smooth' });
