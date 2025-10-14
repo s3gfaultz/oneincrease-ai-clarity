@@ -117,9 +117,11 @@ const ProductDetails = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent_50%)]" />
         
-        {/* Floating gradient orbs */}
-        <div className={`absolute top-20 left-10 w-72 h-72 bg-gradient-to-br ${product.color} opacity-20 rounded-full blur-3xl animate-float`} />
-        <div className={`absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr ${product.color} opacity-15 rounded-full blur-3xl animate-float-slow`} />
+        {/* Floating gradient orbs - orbiting animation */}
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        
         
         <div className="relative container mx-auto px-6">
           <Button 
