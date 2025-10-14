@@ -113,14 +113,14 @@ const ProductDetails = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-32 overflow-hidden">
         {/* Animated background elements */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-20`} />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent_50%)]" />
+        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-5`} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.03),transparent_50%)]" />
         
         {/* Floating gradient orbs - orbiting animation */}
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-10 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-8 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-12 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
         
         
         <div className="relative container mx-auto px-6">
@@ -139,16 +139,16 @@ const ProductDetails = () => {
               <div className="flex justify-center md:justify-start">
                 <div className="relative">
                   {/* Glow effect behind icon */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-30 rounded-3xl blur-2xl scale-110`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-10 rounded-3xl blur-xl scale-110`} />
                   
                   {/* Main icon container */}
-                  <div className={`relative inline-flex items-center justify-center p-12 rounded-3xl bg-gradient-to-br ${product.color} backdrop-blur-glass border border-white/20 shadow-luxury animate-scale-in`}>
-                    <Icon className="w-32 h-32 text-white drop-shadow-2xl" />
+                  <div className="relative inline-flex items-center justify-center p-12 rounded-3xl bg-background/80 backdrop-blur-glass border border-border shadow-card animate-scale-in">
+                    <Icon className="w-32 h-32 text-foreground" />
                   </div>
                   
                   {/* Floating badge */}
-                  <div className="absolute -bottom-4 -right-4 px-6 py-3 rounded-2xl bg-gradient-hero backdrop-blur-glass border border-white/30 shadow-red animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                    <p className="text-white font-bold text-sm">AI-Powered</p>
+                  <div className="absolute -bottom-4 -right-4 px-6 py-3 rounded-2xl bg-background/90 backdrop-blur-glass border border-border shadow-card animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                    <p className="text-foreground font-bold text-sm">AI-Powered</p>
                   </div>
                 </div>
               </div>
