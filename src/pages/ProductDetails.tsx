@@ -118,8 +118,8 @@ const ProductDetails = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent_50%)]" />
         
         {/* Floating gradient orbs */}
-        <div className={`absolute top-20 left-10 w-72 h-72 bg-gradient-to-br ${product.color} opacity-20 rounded-full blur-3xl animate-pulse`} />
-        <div className={`absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr ${product.color} opacity-15 rounded-full blur-3xl animate-pulse`} style={{ animationDelay: '1s' }} />
+        <div className={`absolute top-20 left-10 w-72 h-72 bg-gradient-to-br ${product.color} opacity-20 rounded-full blur-3xl animate-float`} />
+        <div className={`absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr ${product.color} opacity-15 rounded-full blur-3xl animate-float-slow`} />
         
         <div className="relative container mx-auto px-6">
           <Button 
