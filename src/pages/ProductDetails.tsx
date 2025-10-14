@@ -113,10 +113,10 @@ const ProductDetails = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-32 overflow-hidden">
         {/* Animated background elements */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-[0.12]`} />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.12),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.09),transparent_50%)]" />
-        
+        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-[0.15]`} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.12),transparent_50%)]" />
+
         {/* Floating gradient orbs - orbiting animation */}
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-[0.14] blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-[0.12] blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
