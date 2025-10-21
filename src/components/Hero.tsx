@@ -11,11 +11,11 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating particles */}
         
-        {/* Glowing orbs with looping movement */}
+        {/* Glowing orbs with staggered looping movement - ensures button area always has coverage */}
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-secondary rounded-full opacity-10 blur-3xl animate-[orbit-medium_18s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-18 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-7.5s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-12.5s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-secondary rounded-full opacity-15 blur-3xl animate-[orbit-medium_18s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-9s' }}></div>
         
         {/* Flowing waves */}
         <div className="absolute inset-0 opacity-10">
@@ -58,7 +58,7 @@ const Hero = () => {
             Get Started Today
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
-          <Button variant="glass" size="lg" className="bg-white/20 backdrop-blur-md border-2 border-white/30 text-white font-semibold hover:bg-white/30 hover:shadow-blue">
+          <Button variant="glass" size="lg" className="bg-white/25 backdrop-blur-md border-2 border-white/40 text-white font-semibold hover:bg-white/35 hover:shadow-blue shadow-[0_4px_20px_rgba(255,255,255,0.1)]">
             Watch Demo
           </Button>
         </div>
