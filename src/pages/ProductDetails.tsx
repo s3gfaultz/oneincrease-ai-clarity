@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, Clock, BarChart3, ArrowLeft, Check } from "lucide-react";
+import { Brain, Clock, BarChart3, ArrowLeft, Check, ArrowRight } from "lucide-react";
 
 const ProductDetails = () => {
   const { productName } = useParams();
@@ -111,17 +111,15 @@ const ProductDetails = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 overflow-hidden">
-        {/* Animated background elements */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-[0.15]`} />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.12),transparent_50%)]" />
-
-        {/* Floating gradient orbs - orbiting animation */}
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-[0.14] blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-[0.12] blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-[0.17] blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-        
+      <section className="relative pt-32 pb-24 overflow-hidden bg-gradient-subtle">
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Glowing orbs with looping movement */}
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-secondary rounded-full opacity-10 blur-3xl animate-[orbit-medium_18s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
         
         <div className="relative container mx-auto px-6">
           <Button 
@@ -133,67 +131,55 @@ const ProductDetails = () => {
             Back to Home
           </Button>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left side - Icon and visual */}
-              <div className="flex justify-center md:justify-start">
-                <div className="relative">
-                  {/* Glow effect behind icon */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-5 rounded-3xl blur-xl scale-110`} />
-                  
-                  {/* Main icon container */}
-                  <div className={`relative inline-flex items-center justify-center p-12 rounded-3xl bg-gradient-to-br ${product.color} opacity-80 backdrop-blur-glass border border-white/10 shadow-card animate-scale-in`}>
-                    <Icon className="w-32 h-32 text-white/90" />
-                  </div>
-                  
-                  {/* Floating badge */}
-                  <div className={`absolute -bottom-4 -right-4 px-6 py-3 rounded-2xl bg-gradient-to-br ${product.color} opacity-90 backdrop-blur-glass border border-white/20 shadow-card animate-fade-in`} style={{ animationDelay: '0.3s' }}>
-                    <p className="text-white font-bold text-sm">AI-Powered</p>
-                  </div>
-                </div>
+          <div className="max-w-5xl mx-auto text-center">
+            {/* Icon */}
+            <div className="flex justify-center mb-8 animate-scale-in">
+              <div className="p-4 rounded-2xl bg-gradient-glass backdrop-blur-glass border border-white/10 shadow-card">
+                <Icon className="w-16 h-16 text-primary" />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div>
+                <h1 className="text-5xl md:text-7xl font-bold mb-4 text-foreground">
+                  {product.name}
+                </h1>
+                
+                <p className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${product.color} bg-clip-text text-transparent mb-4`}>
+                  {product.title}
+                </p>
+                
+                <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-3xl mx-auto">
+                  {product.tagline}
+                </p>
               </div>
 
-              {/* Right side - Content */}
-              <div className="text-center md:text-left space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div>
-                  <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                    {product.name}
-                  </h1>
-                  
-                  <p className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${product.color} bg-clip-text text-transparent mb-4`}>
-                    {product.title}
-                  </p>
-                  
-                  <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                    {product.tagline}
-                  </p>
-                </div>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                {product.description}
+              </p>
 
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {product.description}
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button 
-                    size="lg" 
-                    onClick={() => navigate("/pricing")}
-                    variant="hero"
-                    className="text-lg px-8 py-6 h-auto shadow-red hover:shadow-red/50 transition-all"
-                  >
-                    Get Started Today
-                  </Button>
-                  <Button 
-                    size="lg"
-                    variant="glass"
-                    onClick={() => {
-                      const overview = document.getElementById('overview');
-                      overview?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="text-lg px-8 py-6 h-auto"
-                  >
-                    Learn More
-                  </Button>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <Button 
+                  size="lg" 
+                  onClick={() => navigate("/pricing")}
+                  variant="hero"
+                  className="text-lg px-8 py-6 h-auto shadow-red hover:shadow-red/50 transition-all group"
+                >
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="glass"
+                  onClick={() => {
+                    const overview = document.getElementById('overview');
+                    overview?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="text-lg px-8 py-6 h-auto"
+                >
+                  Learn More
+                </Button>
               </div>
             </div>
           </div>
