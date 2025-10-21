@@ -76,12 +76,8 @@ const Footer = () => {
                 <span>info@oneincrease.com</span>
               </a>
               <div className="flex items-center gap-2 text-white/70 text-sm">
-                <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/70 text-sm">
                 <MapPin size={16} />
-                <span>San Francisco, CA</span>
+                <span>Amsterdam, Netherlands</span>
               </div>
             </div>
           </div>
@@ -90,13 +86,13 @@ const Footer = () => {
           <div className="space-y-3">
             <h4 className="font-semibold text-white">Follow Us</h4>
             <div className="flex gap-3">
-              <a
+              {/* <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-white/10 backdrop-blur-glass border border-white/20 hover:border-white/40 hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              >
-                <Facebook size={18} className="text-white" />
+              > */}
+                {/* <Facebook size={18} className="text-white" />
               </a>
               <a
                 href="https://twitter.com"
@@ -113,9 +109,9 @@ const Footer = () => {
                 className="p-2.5 rounded-lg bg-white/10 backdrop-blur-glass border border-white/20 hover:border-white/40 hover:bg-white/20 transition-all duration-300 hover:scale-110"
               >
                 <Linkedin size={18} className="text-white" />
-              </a>
+              </a> */}
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/oneincreaseplanning"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-white/10 backdrop-blur-glass border border-white/20 hover:border-white/40 hover:bg-white/20 transition-all duration-300 hover:scale-110"

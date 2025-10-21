@@ -173,7 +173,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-primary-foreground/80">contact@oneincrease.com</p>
+                  <p className="text-primary-foreground/80">info@oneincrease.com</p>
                 </div>
               </div>
 

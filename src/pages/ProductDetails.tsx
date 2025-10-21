@@ -115,10 +115,10 @@ const ProductDetails = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Glowing orbs with staggered looping movement - ensures button area always has coverage */}
-          <div className="absolute top-3/4 left-2/3 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-large_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute top-3/4 left-2/3 w-80 h-80 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-medium_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-7.5s' }}></div>
-          <div className="absolute top-3/4 left-2/3 w-64 h-64 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-12.5s' }}></div>
-          <div className="absolute top-3/4 left-2/3 w-72 h-72 bg-gradient-secondary rounded-full opacity-10 blur-3xl animate-[orbit-medium_18s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-9s' }}></div>
+          <div className="absolute top-3/4 left-2/4 w-96 h-96 bg-gradient-hero rounded-full opacity-20 blur-3xl animate-[orbit-small_20s_linear_infinite] -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute top-3/4 left-2/4 w-96 h-96 bg-gradient-accent rounded-full opacity-15 blur-3xl animate-[orbit-small_15s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-7.5s' }}></div>
+          <div className="absolute top-3/4 left-2/4 w-96 h-96 bg-gradient-blue-red rounded-full opacity-25 blur-2xl animate-[orbit-small_25s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-12.5s' }}></div>
+          <div className="absolute top-3/4 left-2/4 w-96 h-96 bg-gradient-secondary rounded-full opacity-10 blur-3xl animate-[orbit-small_18s_linear_infinite] -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '-9s' }}></div>
         </div>
         
         <div className="relative container mx-auto px-6">
@@ -168,17 +168,6 @@ const ProductDetails = () => {
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="glass"
-                  onClick={() => {
-                    const overview = document.getElementById('overview');
-                    overview?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="text-lg px-8 py-6 h-auto bg-white/25 backdrop-blur-md border-2 border-white/40 text-white font-semibold hover:bg-white/35 shadow-[0_4px_20px_rgba(255,255,255,0.1)]"
-                >
-                  Learn More
                 </Button>
               </div>
             </div>
