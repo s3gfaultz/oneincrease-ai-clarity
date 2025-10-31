@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/vite_react_shadcn_ts/",
+  base: "/oneincrease-ai-clarity/",
 }));
